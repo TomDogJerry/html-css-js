@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="xxx" method="GET">
+        <!--text 文本框 用户可以输入任何文字-->
+        用户名：<input type="text" name="username" value="请输入用户名" maxlength="6"/><br/>
+        <!--password 密码框 用户看不见输入的密码-->
+        密码：<input type="password" name="pwd"/><br/>
+        <!--radio单选按钮 -->
+        性别：男 <input type="radio" name="sex" value="男"/> 女 <input type="radio" name="sex" value="女"/>
+        人妖 <input type="radio" name="sex" value="人妖" checked="checked"/><br/>
+        <!--checkbox 复选框-->
+        爱好：干饭<input type="checkbox" name="hobby" value="干饭"/> 睡觉<input type="checkbox" name="hobby" value="睡觉"/> 
+        打豆豆<input type="checkbox" name="hobby" value="打豆豆" checked="checked"/><br/>
+        <!--submit提交按钮 点击提交按钮后，所有表单域中填写的值都会提交给服务器-->
+        <input type="submit" value="免费注册"/>
+        <!--reset重置按钮 恢复初始状态-->
+        <input type="reset" value="重新填写"/>
+        <!--button普通按钮-->
+        <input type="button" value="获取短信验证码"/>
+        <!--文件域 使用场景：上传文件使用-->
+        上传头像：<input type="file">
+    </form>
+</body>
+</html>
