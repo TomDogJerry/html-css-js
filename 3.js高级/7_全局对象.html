@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*9. Global
+			1. 特点：全局对象，这个Global中封装的方法不需要对象就可以直接调用。  方法名();
+			2. 方法：
+			    encodeURI():url编码
+			    decodeURI():url解码
+
+			    encodeURIComponent():url编码,编码的字符更多
+			    decodeURIComponent():url解码
+
+			    parseInt():将字符串转为数字
+			        * 逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number
+			    isNaN():判断一个值是否是NaN
+			        * NaN六亲不认，连自己都不认。NaN参与的==比较全部问false
+
+			    eval():讲 JavaScript 字符串，并把它作为脚本代码来执行。
+            3. URL编码
+               创客学院 =  %E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2*/
+            var str = "http://www.baidu.com?wd=易烊千玺";
+            var encode = encodeURI(str);
+            document.write(encode+"<br>");//http://www.baidu.com?wd=%E6%98%93%E7%83%8A%E5%8D%83%E7%8E%BA
+            var s = decodeURI(encode);
+            document.write(s+"<br>");
+            var str1 = "http://www.baidu.com?wd=易烊千玺";
+            var encode1 = encodeURIComponent(str1);
+            document.write(encode1+"<br>");//http%3A%2F%2Fwww.baidu.com%3Fwd%3D%E6%98%93%E7%83%8A%E5%8D%83%E7%8E%BA
+            var s1 = decodeURIComponent(encode1);
+            document.write(s1+"<br>");
+
+            var str2 = "a1234abc"
+            var n = parseInt(str2);
+            // alert(n+1);
+
+            var a = NaN;
+            document.write(a==NaN);
+            document.write(isNaN(a));
+
+            var jsCode = "alert(123);";
+            eval(jsCode);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

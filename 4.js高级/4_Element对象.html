@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a>点我试一试</a>
+    <input type="button" id="btn_set" value="设置属性">
+    <input type="button" id="btn_remove" value="删除属性">
+    <script>
+        /** Element：元素对象
+		1. 获取/创建：通过document来获取和创建
+		2. 方法：
+			1. removeAttribute()：删除属性
+			2. setAttribute()：设置属性*/
+        var btn_set = document.getElementById("btn_set");
+        btn_set.onclick = function(){
+            var element_a = document.getElementsByTagName("a")[0];
+            element_a.setAttribute("href","http://www.baidu.com");
+        }
+
+        var btn_remove = document.getElementById("btn_remove");
+        btn_remove.onclick = function(){
+            var element_a = document.getElementsByTagName("a")[0];
+            element_a.removeAttribute("href");
+        }
+    </script>
+</body>
+</html>

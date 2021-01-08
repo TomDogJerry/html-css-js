@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        span{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <span id="time">5</span>秒之后，自动跳转到首页...
+    </p>
+    <script>
+        /*
+        分析：
+        1.显示页面效果 <p>
+        2.倒计时读秒效果实现
+            *定义一个方法，获取span标签，修改span标签里面的内容
+            *定义一个定时器，1秒执行一次该方法
+        3.在方法中判断，如果时间<=0，跳转到百度页
+        */
+        var second=5;
+        var time = document.getElementById("time");
+        function showTime(){
+            second--;
+            if(second<=0){
+                location.href="https://www.baidu.com";
+            }
+            time.innerHTML=second;
+        }
+        setInterval(showTime,1000);
+    </script>
+</body>
+</html>
